@@ -1,0 +1,18 @@
+{
+  "name": "Engine_Tex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"build":"tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Tex"
+  ],
+  "author": "Arun Jois",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.2.4"
+  }
+}
