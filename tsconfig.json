@@ -7,5 +7,15 @@
     "strict": true
   }
 }
-
-
+{
+"exclude": [
+    "typings/browser.d.ts",
+    "typings/browser",
+    "node_modules"
+  ]
+}
+{
+  "files": [
+    "typings/main.d.ts"
+  ]
+}

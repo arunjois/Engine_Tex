@@ -17,7 +17,7 @@ class Enumerate extends Word {
 }
 
 class Itemize extends Word {
-	
+
 }
 
 
