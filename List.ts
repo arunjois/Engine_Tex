@@ -1,13 +1,13 @@
-class Node {
-    element:any;
+class Nodes<T> {
+    element:T;
     next:any;
-    constructor(element:any){
+    constructor(element:T){
         this.element=element;
         this.next=null;
     }
 }
 class List<T>{
-    head=null;
+    public head:Nodes<T>;
     len=0;
     public append(elem:any) {
         if(this.head==null) {
@@ -28,8 +28,15 @@ class List<T>{
         let temp:any;
         temp=this.head;
         while(this.head!=null) {
-            console.log(temp);
+            console.log(this.head.element);
             this.head=temp.next;
         }
     }
 }
+    var para = "This is a paragraph";
+    var arr = para.split(" ");
+    arr.forEach(function (ele) {
+        let ll = new List<String>();
+        ll.append(ele);
+        console.log(ll.head);
+    })
