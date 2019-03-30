@@ -1,4 +1,4 @@
-class Nodes<T> {
+export class Item<T> {
     element:T;
     next:any;
     constructor(element:T){
@@ -6,8 +6,8 @@ class Nodes<T> {
         this.next=null;
     }
 }
-class List<T>{
-    public head:Nodes<T>;
+export class List<T>{
+    public head:Item<T>;
     len=0;
     public append(elem:any) {
         if(this.head==null) {
@@ -40,3 +40,10 @@ class List<T>{
         ll.append(ele);
         console.log(ll.head);
     })
+    para="1 2 3 4 5";
+    arr = para.split(" ");
+    arr.forEach(function(tmp) {
+        let tt = new List<Number>();
+        tt.append(tmp);
+        console.log(tt.head);
+    });

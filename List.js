@@ -1,10 +1,13 @@
-var Nodes = /** @class */ (function () {
-    function Nodes(element) {
+"use strict";
+exports.__esModule = true;
+var Item = /** @class */ (function () {
+    function Item(element) {
         this.element = element;
         this.next = null;
     }
-    return Nodes;
+    return Item;
 }());
+exports.Item = Item;
 var List = /** @class */ (function () {
     function List() {
         this.len = 0;
@@ -34,10 +37,18 @@ var List = /** @class */ (function () {
     };
     return List;
 }());
+exports.List = List;
 var para = "This is a paragraph";
 var arr = para.split(" ");
 arr.forEach(function (ele) {
     var ll = new List();
     ll.append(ele);
     console.log(ll.head);
+});
+para = "1 2 3 4 5";
+arr = para.split(" ");
+arr.forEach(function (tmp) {
+    var tt = new List();
+    tt.append(tmp);
+    console.log(tt.head);
 });
