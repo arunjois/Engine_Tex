@@ -13,7 +13,6 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var List_1 = require("./List");
 var Word = /** @class */ (function () {
     function Word(w) {
         this.italic = false;
@@ -57,20 +56,36 @@ var Title = /** @class */ (function () {
     }
     return Title;
 }());
-var project_name = "This is a project";
-var arr = project_name.split(" ");
-arr.forEach(function (ele) {
-    var w = new Word(ele);
-    var temp = new List_1.List();
-    temp.append(w);
+var temp = "this is string";
+var ll = temp.split(function (ele) {
+    var ll = new LinkedList();
+    ll.append(ele);
+    return ll;
 });
-function returnSet(temp) {
-    var arr = temp.split(" ");
-    var somelist = arr.forEach(function (ele) {
-        var w = new Word(ele);
-        var temp = new List_1.List();
-        temp.append(w);
-        return temp;
-    });
-}
-//Title obj = new Title(list);
+var ll1 = temp.split(function (ele) {
+    var ll = new LinkedList();
+    ll.append(ele);
+    return ll;
+});
+var ll2 = temp.split(function (ele) {
+    var ll = new LinkedList();
+    ll.append(ele);
+    return ll;
+});
+var ll3 = temp.split(function (ele) {
+    var ll = new LinkedList();
+    ll.append(ele);
+    return ll;
+});
+var ll4 = temp.split(function (ele) {
+    var ll = new LinkedList();
+    ll.append(ele);
+    return ll;
+});
+var ll5 = temp.split(function (ele) {
+    var ll = new LinkedList();
+    ll.append(ele);
+    return ll;
+});
+var title = new Title(ll, ll1, ll2, ll3, ll4, ll5);
+console.log(title);

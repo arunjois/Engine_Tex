@@ -74,3 +74,4 @@ var ll5 = temp.split(function(ele) {
 	return ll;
 });
 let title = new Title(ll,ll1,ll2,ll3,ll4,ll5);
+console.log(title);
