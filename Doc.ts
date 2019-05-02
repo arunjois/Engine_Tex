@@ -1,5 +1,4 @@
 import {Item,List} from "./List";
-import { listenerCount } from "cluster";
 export class Word {
 	word:String
 	italic:boolean=false;
@@ -51,5 +50,13 @@ arr.forEach(
 		temp.append(w);
 	}
 );
-
+function returnSet(temp:String) {
+	let arr = temp.split(" ");
+	let somelist =arr.forEach(function(ele) {
+		let w = new Word(ele);
+		let temp=new List<Word>();
+		temp.append(w);
+		return temp;
+	})
+}
 //Title obj = new Title(list);

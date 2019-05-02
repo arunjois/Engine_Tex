@@ -97,10 +97,12 @@ class LinkedList<T> {
 var para = "This is a paragraph";
 var arr = para.split(" ");
 arr.forEach(function (ele) {
-    let ll = new List<String>();
+    let ll = new LinkedList<String>();
     ll.append(ele);
-    console.log(ll.head);
+    //console.log(ll.head);
+    ll.toString();
 })
+/*
 para="1 2 3 4 5";
 arr = para.split(" ");
 arr.forEach(function(tmp) {
@@ -108,3 +110,4 @@ arr.forEach(function(tmp) {
     tt.append(tmp);
     console.log(tt.head);
 })
+*/

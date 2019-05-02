@@ -87,3 +87,20 @@ var LinkedList = /** @class */ (function () {
     };
     return LinkedList;
 }());
+var para = "This is a paragraph";
+var arr = para.split(" ");
+arr.forEach(function (ele) {
+    var ll = new LinkedList();
+    ll.append(ele);
+    //console.log(ll.head);
+    ll.toString();
+});
+/*
+para="1 2 3 4 5";
+arr = para.split(" ");
+arr.forEach(function(tmp) {
+    let tt = new List<Number>();
+    tt.append(tmp);
+    console.log(tt.head);
+})
+*/

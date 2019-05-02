@@ -1,15 +1,15 @@
 export class Item<T> {
     element:T;
-    next:any;
+    next:null;
     constructor(element:T){
         this.element=element;
         this.next=null;
     }
 }
 export class List<T>{
-    public head:Item<T>;
+    public head:Item<T> | any;
     len=0;
-    public append(elem:any) {
+    public append(elem:Item<T>) {
         if(this.head==null) {
             this.head=elem;
             this.len++;

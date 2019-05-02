@@ -64,4 +64,13 @@ arr.forEach(function (ele) {
     var temp = new List_1.List();
     temp.append(w);
 });
+function returnSet(temp) {
+    var arr = temp.split(" ");
+    var somelist = arr.forEach(function (ele) {
+        var w = new Word(ele);
+        var temp = new List_1.List();
+        temp.append(w);
+        return temp;
+    });
+}
 //Title obj = new Title(list);
