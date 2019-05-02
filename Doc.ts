@@ -1,4 +1,5 @@
 import {Item,List} from "./List";
+import { emitKeypressEvents } from "readline";
 export class Word {
 	word:String
 	italic:boolean=false;
@@ -41,22 +42,35 @@ class Title {
 		this.college=College;
 	}
 }
-let project_name = "This is a project";
-let arr = project_name.split(" ");
-arr.forEach(
-	function(ele) {
-		let w = new Word(ele);
-		let temp=new List<Word>();
-		temp.append(w);
-	}
-);
-function returnSet(temp:String) {
-	let arr = temp.split(" ");
-	let somelist =arr.forEach(function(ele) {
-		let w = new Word(ele);
-		let temp=new List<Word>();
-		temp.append(w);
-		return temp;
-	})
-}
-//Title obj = new Title(list);
+var temp = "this is string";
+var ll = temp.split(function(ele) {
+	var ll = new LinkedList<Word>();
+	ll.append(ele);
+	return ll;
+});
+var ll1 = temp.split(function(ele) {
+	var ll = new LinkedList<Word>();
+	ll.append(ele);
+	return ll;
+});
+var ll2 = temp.split(function(ele) {
+	var ll = new LinkedList<Word>();
+	ll.append(ele);
+	return ll;
+});
+var ll3 = temp.split(function(ele) {
+	var ll = new LinkedList<Word>();
+	ll.append(ele);
+	return ll;
+});
+var ll4 = temp.split(function(ele) {
+	var ll = new LinkedList<Word>();
+	ll.append(ele);
+	return ll;
+});
+var ll5 = temp.split(function(ele) {
+	var ll = new LinkedList<Word>();
+	ll.append(ele);
+	return ll;
+});
+let title = new Title(ll,ll1,ll2,ll3,ll4,ll5);
