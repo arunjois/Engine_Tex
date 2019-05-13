@@ -12,6 +12,9 @@ var Chapter = /** @class */ (function () {
     function Chapter(Section) {
         this.section = Section;
     }
+    Chapter.prototype.getSection = function () {
+        return this.section.toString();
+    };
     return Chapter;
 }());
 exports.Chapter = Chapter;
@@ -42,4 +45,4 @@ var c = new Chapter(l);
 var doc = new Generic_1.LinkedList();
 doc.append(c);
 var d = new Document(doc);
-console.log(d.chapter);
+console.log(c.getSection());

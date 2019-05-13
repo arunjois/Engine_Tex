@@ -5,9 +5,13 @@ var LinkedNode = /** @class */ (function () {
         this._elem = elem;
         this.next = null;
     }
-    /*get*/ LinkedNode.prototype.elem = function () {
-        return this._elem;
-    };
+    Object.defineProperty(LinkedNode.prototype, "elem", {
+        get: function () {
+            return this._elem;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return LinkedNode;
 }());
 exports.LinkedNode = LinkedNode;

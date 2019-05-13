@@ -1,5 +1,5 @@
 export class LinkedNode<T> {
-    private _elem: T;
+    public _elem: T;
     public next: LinkedNode<T> | null;
 
     constructor(elem: T) {
@@ -7,7 +7,7 @@ export class LinkedNode<T> {
         this.next = null;
     }
 
-    /*get*/ elem(): T {
+    get elem(): T {
         return this._elem;
     }
 }

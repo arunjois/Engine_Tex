@@ -1,5 +1,4 @@
 import { LinkedList } from "./Generic";
-import { StringifyOptions } from "querystring";
 export class Document {
     chapter : LinkedList<Chapter>;
     constructor(Chapter:LinkedList<Chapter>) {
@@ -10,6 +9,9 @@ export class Chapter {
     section : LinkedList<Section>;
     constructor(Section:LinkedList<Section>) {
         this.section=Section;
+    }
+    public getSection() : String {
+        return this.section.toString();
     }
 }
 export class Section {
@@ -40,4 +42,4 @@ let c = new Chapter(l);
 let doc = new LinkedList<Chapter>();
 doc.append(c);
 let d = new Document(doc);
-console.log(d.chapter);
+console.log(c.getSection());
