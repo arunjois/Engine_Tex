@@ -1,4 +1,4 @@
-class Documents {
+export class Documents {
     type:string;
     title : String|null;
     text : String|null;
