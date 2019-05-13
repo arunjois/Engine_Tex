@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var LinkedNode = /** @class */ (function () {
     function LinkedNode(elem) {
         this._elem = elem;
@@ -8,6 +10,7 @@ var LinkedNode = /** @class */ (function () {
     };
     return LinkedNode;
 }());
+exports.LinkedNode = LinkedNode;
 var LinkedList = /** @class */ (function () {
     function LinkedList(headElement) {
         this.head = null;
@@ -87,6 +90,7 @@ var LinkedList = /** @class */ (function () {
     };
     return LinkedList;
 }());
+exports.LinkedList = LinkedList;
 var para = "This is a paragraph";
 var arr = para.split(" ");
 arr.forEach(function (ele) {
@@ -95,12 +99,3 @@ arr.forEach(function (ele) {
     //console.log(ll.head);
     ll.toString();
 });
-/*
-para="1 2 3 4 5";
-arr = para.split(" ");
-arr.forEach(function(tmp) {
-    let tt = new List<Number>();
-    tt.append(tmp);
-    console.log(tt.head);
-})
-*/

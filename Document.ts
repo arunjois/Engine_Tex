@@ -1,12 +1,18 @@
 import { LinkedList } from "./Generic";
 import { StringifyOptions } from "querystring";
-class Document {
+export class Document {
     chapter : LinkedList<Chapter>;
+    constructor(Chapter:LinkedList<Chapter>) {
+        this.chapter=Chapter;
+    }
 }
-class Chapter {
+export class Chapter {
     section : LinkedList<Section>;
+    constructor(Section:LinkedList<Section>) {
+        this.section=Section;
+    }
 }
-class Section {
+export class Section {
     title : String;
     text : String;
     public setTitle(Title:String) {
@@ -27,3 +33,11 @@ class Section {
 
     }
 }
+let s = new Section ("This is title","This is text");
+let l = new LinkedList<Section>();
+l.append(s);
+let c = new Chapter(l);
+let doc = new LinkedList<Chapter>();
+doc.append(c);
+let d = new Document(doc);
+console.log(d.chapter);
