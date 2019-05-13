@@ -1,4 +1,4 @@
-class LinkedNode<T> {
+export class LinkedNode<T> {
     private _elem: T;
     public next: LinkedNode<T> | null;
 
@@ -12,7 +12,7 @@ class LinkedNode<T> {
     }
 }
 
-class LinkedList<T> {
+export class LinkedList<T> {
     private head: LinkedNode<T> | null = null;
     private len = 0;
 

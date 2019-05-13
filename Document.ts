@@ -1,33 +1,29 @@
+import { LinkedList } from "./Generic";
+import { StringifyOptions } from "querystring";
+class Document {
+    chapter : LinkedList<Chapter>;
+}
+class Chapter {
+    section : LinkedList<Section>;
+}
 class Section {
-    subheading = new String();
-    text:String[];
-    constructor(SubHeading:String,text:String[]) {
-        this.subheading=SubHeading;
-        this.text=text;
+    title : String;
+    text : String;
+    public setTitle(Title:String) {
+        this.title=Title;
+    }
+    public  getTitle() :String{
+        return this.title;
+    }
+    public setText(Text:String) {
+        this.text=Text;
+    }
+    public getText():String {
+        return this.text;
+    }
+    constructor (Title:String,Text:String) {
+        this.title=Title;
+        this.text=Text;
+
     }
 }
-class Title extends Section {
-    head:String;
-    section:Section[];
-    constructor(Head:String,Section:Section[]){
-        super(Section[0].subheading,Section[0].text);
-        this.head=Head;
-        this.section=Section;
-    }
-}
-class Documents extends Title {
-   title:Title[];
-   constructor(Title:Title[]) {
-       super(Title[0].head,Title[0].section);
-       this.title=Title;
-   }
-}
-var heading = "This is heading";
-var text = "this is text";
-var arr = ['this','is','text'];
-var Some:any;
-var d:any;
-Some = new Section(heading,arr);
-t : new Title(heading, Some);
-d: new Document();
-console.log(d);
