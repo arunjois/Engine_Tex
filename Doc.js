@@ -87,5 +87,7 @@ var ll5 = temp.split(function (ele) {
     ll.append(ele);
     return ll;
 });
+ll1.bold = true;
 var title = new Title(ll, ll1, ll2, ll3, ll4, ll5);
 console.log(title);
+console.log(ll1);

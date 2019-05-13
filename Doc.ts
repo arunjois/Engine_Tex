@@ -1,5 +1,4 @@
 import {Item,List} from "./List";
-import { emitKeypressEvents } from "readline";
 export class Word {
 	word:String
 	italic:boolean=false;
@@ -14,7 +13,11 @@ class Paragraph extends Word {
 	alignment:any;
 
 }
-class Enumerate extends Word {
+class Enumerate {
+	list : List<Word>;
+	constructor(l:List<Word>) {
+		this.list=l;
+	}
 
 }
 
